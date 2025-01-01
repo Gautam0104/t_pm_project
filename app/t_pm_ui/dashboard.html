@@ -55,9 +55,20 @@
 
   <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
   <script src="../assets/js/config.js"></script>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
+<script>
+
+    Swal.fire({
+  title: "Login Successfully!",
+  text: "You are on dashboard!",
+  icon: "success"
+});
+
+</script>
   <!-- Layout wrapper -->
   <div class="layout-wrapper layout-content-navbar">
     <div class="layout-container">
@@ -647,8 +658,8 @@
                       <div
                         class="d-flex justify-content-between align-items-start card-widget-1 border-end pb-4 pb-sm-0">
                         <div>
-                          <p class="mb-1">In-store Sales</p>
-                          <h4 class="mb-1">$5,345.43</h4>
+                          <p class="mb-1">Active Projects</p>
+                          <h4 class="mb-1">0</h4>
                           <p class="mb-0">
                             <span class="me-2">5k orders</span><span class="badge bg-label-success">+5.7%</span>
                           </p>
@@ -664,8 +675,8 @@
                       <div
                         class="d-flex justify-content-between align-items-start card-widget-2 border-end pb-4 pb-sm-0">
                         <div>
-                          <p class="mb-1">Website Sales</p>
-                          <h4 class="mb-1">$674,347.12</h4>
+                          <p class="mb-1">Total Ticket</p>
+                          <h4 class="mb-1">0</h4>
                           <p class="mb-0">
                             <span class="me-2">21k orders</span><span class="badge bg-label-success">+12.4%</span>
                           </p>
@@ -681,8 +692,8 @@
                       <div
                         class="d-flex justify-content-between align-items-start border-end pb-4 pb-sm-0 card-widget-3">
                         <div>
-                          <p class="mb-1">Discount</p>
-                          <h4 class="mb-1">$14,235.12</h4>
+                          <p class="mb-1">Complete Tasks</p>
+                          <h4 class="mb-1">0</h4>
                           <p class="mb-0">6k orders</p>
                         </div>
                         <span class="avatar p-2 me-sm-6">
@@ -693,8 +704,8 @@
                     <div class="col-sm-6 col-lg-3">
                       <div class="d-flex justify-content-between align-items-start">
                         <div>
-                          <p class="mb-1">Affiliate</p>
-                          <h4 class="mb-1">$8,345.23</h4>
+                          <p class="mb-1">Overdue Tasks</p>
+                          <h4 class="mb-1">0</h4>
                           <p class="mb-0">
                             <span class="me-2">150 orders</span><span class="badge bg-label-danger">-3.5%</span>
                           </p>
@@ -725,14 +736,14 @@
                     <tr>
                       <th></th>
                       <th></th>
-                      <th>product</th>
-                      <th>category</th>
-                      <th>stock</th>
-                      <th>sku</th>
-                      <th>price</th>
-                      <th>qty</th>
+                      <th>PROJECT NAME</th>
+                      <th>PROJECT LEADER</th>
+                      <th>TEAM MEMBERS</th>
+                      <th>TOTAL ETA</th>
+                      <th>TOTAL ELAPSED TIME</th>
+                      
                       <th>status</th>
-                      <th>actions</th>
+                      
                     </tr>
                   </thead>
                 </table>
