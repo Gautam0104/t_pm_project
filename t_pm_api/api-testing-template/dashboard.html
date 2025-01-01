@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Dashboard</h1>
+    <p id="welcomeMessage"></p>
+    <button id="logoutButton">Logout</button>
+  </div>
+
+  <script>
+    // Retrieve message and token from localStorage
+    const token = localStorage.getItem('token');
+    const username = localStorage.getItem('username');
+    const welcomeMessage = document.getElementById('welcomeMessage');
+
+    // Display a welcome message
+    if (username) {
+      welcomeMessage.textContent = `Hello, ${username}! You have successfully logged in.`;
+    } else {
+      welcomeMessage.textContent = "Welcome!";
+    }
+
+    // Handle logout
+    document.getElementById('logoutButton').addEventListener('click', () => {
+      localStorage.removeItem('token');
+      localStorage.removeItem('username');
+      window.location.href = '../../'; // Redirect to login page
+    });
+
+    // setTimeout(function(){
+    //   console.log("hello");
+    //   localStorage.removeItem('token');
+    //   localStorage.removeItem('username');
+    //   window.location.href = 'index.html'; // Redirect to login page
+  
+    // },5000)
+    // Redirect to login if no token exists
+    if (!token) {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
